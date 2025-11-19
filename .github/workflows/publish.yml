@@ -23,6 +23,10 @@ jobs:
           install.packages("readxl")
           install.packages("downlit")
           install.packages("xml2")
+          install.packages("DT")
+          install.packages("dplyr")
+          install.packages("ggplot2")
+          install.packages("plotly")
         shell: Rscript {0}
 
       - name: Set up Quarto
