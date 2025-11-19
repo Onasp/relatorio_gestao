@@ -20,14 +20,14 @@ jobs:
         run: |
           install.packages("rmarkdown")
           install.packages("knitr")
+          install.packages("tidyverse")
           install.packages("readxl")
           install.packages("downlit")
           install.packages("xml2")
           install.packages("DT")
-          install.packages("dplyr")
-          install.packages("ggplot2")
           install.packages("plotly")
           install.packages("formattable")
+          install.packages("kableExtra")
         shell: Rscript {0}
 
       - name: Set up Quarto
