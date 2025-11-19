@@ -20,6 +20,9 @@ jobs:
         run: |
           install.packages("rmarkdown")
           install.packages("knitr")
+          install.packages("readxl")
+          install.packages("downlit")
+          install.packages("xml2")
         shell: Rscript {0}
 
       - name: Set up Quarto
