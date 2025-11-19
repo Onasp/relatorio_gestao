@@ -27,6 +27,7 @@ jobs:
           install.packages("dplyr")
           install.packages("ggplot2")
           install.packages("plotly")
+          install.packages("formattable")
         shell: Rscript {0}
 
       - name: Set up Quarto
