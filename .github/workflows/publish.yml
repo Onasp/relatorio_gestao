@@ -13,17 +13,17 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      # --- INSTALAÇÃO DE FERRAMENTAS DO SISTEMA (LINUX) ---
+      # --- FERRAMENTAS DO SISTEMA (LINUX) ---
       - name: Install Linux System Dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev libfontconfig1-dev libfreetype6-dev libharfbuzz-dev libfribidi-dev libpng-dev libtiff5-dev libjpeg-dev libgdal-dev libgeos-dev libproj-dev libudunits2-dev libmagick++-dev cargo
-      # ----------------------------------------------------
+      # --------------------------------------
 
       - name: Set up R
         uses: r-lib/actions/setup-r@v2
 
-      # --- INSTALAÇÃO DOS PACOTES R ---
+      # --- PACOTES DO R ---
       - name: Install R packages
         run: |
           install.packages("rmarkdown")
@@ -41,8 +41,9 @@ jobs:
           install.packages("transformr")
           install.packages("gifski")
           install.packages("gganimate")
+          install.packages("abjutils")
         shell: Rscript {0}
-      # --------------------------------
+      # --------------------
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
